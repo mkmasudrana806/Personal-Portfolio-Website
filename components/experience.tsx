@@ -110,7 +110,7 @@ const experiences = [
       "LaTeX",
       "Lucidchart",
     ],
-    experienceType: "Research Publication",
+    experienceType: "Publication",
   },
 ];
 
