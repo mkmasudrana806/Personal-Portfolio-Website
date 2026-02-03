@@ -1,10 +1,5 @@
-import AboutMe from "@/components/aboutMe";
-import EducationAndCareer from "@/components/educationAndCareer";
-import Experience from "@/components/experience";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import Projects from "@/components/projects";
-import Skills from "@/components/skills";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -12,11 +7,7 @@ export default function Home() {
     <div className="w-full">
       <Header />
       <Hero />
-      <AboutMe />
-      <EducationAndCareer />
-      <Skills />
-      <Projects />
-      <Experience />
+      <h1>I am going to make this portfolio multi disciplinary roles based system</h1>
       <Footer />
     </div>
   );
