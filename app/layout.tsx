@@ -12,25 +12,41 @@ export const metadata: Metadata = {
   title: "Masud Rana | Backend Engineer • Node.js",
   description:
     "Building scalable, production-ready APIs with Node.js, TypeScript & BullMQ. Focused on system design, security, and reliable backend architecture.",
-  generator: "Next.js & Tailwind CSS",
+  metadataBase: new URL("https://masudranasheikh.me"),
   openGraph: {
     title: "Masud Rana | Backend Engineer • Node.js",
     description:
       "Building scalable, production-ready APIs with Node.js, TypeScript & BullMQ. Focused on system design, security, and reliable backend architecture.",
     siteName: "Masud Rana Portfolio",
-    images: {
-      url: "/masud rana profile picture.webp",
-    },
+
+    images: [
+      {
+        width: 650,
+        height: 450,
+        url: "/masud-rana-profile-picture.webp",
+        alt: "Masud Rana | Backend Engineer",
+      },
+    ],
     url: "https://masudranasheikh.me",
     locale: "en_US",
     type: "website",
   },
 
+  twitter: {
+    card: "summary_large_image",
+    title: "Masud Rana | Backend Engineer • Node.js",
+    description:
+      "Building scalable backend systems with Node.js and TypeScript.",
+    images: ["/masud-rana-profile-picture.webp"],
+  },
+
   keywords: [
-    "Backend Developer",
+    "Backend Engineer",
+    "Node.js Developer",
+    "TypeScript Developer",
     "CSE Student Bangladesh",
-    "Node.js",
     "Express.js",
+    "System Design",
     "AI Job Platform",
   ],
   icons: {
