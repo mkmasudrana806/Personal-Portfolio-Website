@@ -2,7 +2,7 @@ import { GraduationCap, MapPin } from "lucide-react";
 
 const AboutMeBackend = () => {
   return (
-    <section id="about" className="relative  z-10 mt-16  px-4 overflow-hidden ">
+    <section id="about" className="relative  z-10 mt-16 overflow-hidden ">
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="mb-12">
