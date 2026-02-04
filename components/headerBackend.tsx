@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const HeaderBackend = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,9 @@ const HeaderBackend = () => {
         <Link href="#hero" className="flex items-center gap-2">
           <div className="p-0.5 rounded-full bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
             <div className="bg-white rounded-full p-0.25">
-              <img
+              <Image
+                width={100}
+                height={100}
                 src="/Md_Masud_Rana-logo.webp"
                 alt="Masud Rana"
                 className="w-8 h-8 rounded-full object-cover"
@@ -48,7 +51,10 @@ const HeaderBackend = () => {
           </div>
 
           {/* CTA Button */}
-          <Link href={"#footer"} className="hidden md:inline-flex px-5 py-2 rounded-md bg-accent text-accent-foreground text-sm font-medium transition-opacity hover:opacity-90">
+          <Link
+            href={"#footer"}
+            className="hidden md:inline-flex px-5 py-2 rounded-md bg-accent text-accent-foreground text-sm font-medium transition-opacity hover:opacity-90"
+          >
             Get in Touch
           </Link>
         </div>

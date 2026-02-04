@@ -1,4 +1,5 @@
 import { ArrowRight, Brain, Compass, ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 import React, { ReactElement } from "react";
 
 interface Project {
@@ -19,7 +20,7 @@ const projects: Project[] = [
     title: "AI-Powered Recruiting & Job Searching",
     description:
       "AI-Powered  job recruting, job ranking, and job searching platforlm. Architected a high-concurrency backend system using Node.js and TypeScript to automate recruitment workflows through AI-driven intelligence. The platform features a distributed processing engine that performs deep-dive Skills Gap Analysis between candidate resumes and job descriptions to generate structured, context-aware interview guides.",
-    image: "/ai job based job recruiting diagram.webp",
+    image: "/ai-job-based-job-recruiting-diagram.webp",
     responsibilities: [
       <>
         Designed <span className="text-accent font-medium">RESTful APIs</span>{" "}
@@ -168,13 +169,17 @@ const ProjectsBackend = () => {
                   <div className="order-1 md:order-2">
                     {/* Architecture Visual */}
                     <figure>
-                      <img
+                      <Image
+                        className="w-full"
+                        width={100}
+                        height={100}
                         src={project.image}
                         alt="AI powered job recruiting system with background job."
                       />
                       <figcaption className="mt-2  text-center">
-                        Fig. 1: A high level workflow diagram of embedding when a
-                        new job is posted in our AI-powered recruiting platform.
+                        Fig. 1: A high level workflow diagram of embedding when
+                        a new job is posted in our AI-powered recruiting
+                        platform.
                       </figcaption>
                     </figure>
                   </div>

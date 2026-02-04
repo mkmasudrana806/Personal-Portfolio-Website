@@ -1,4 +1,5 @@
 import { GraduationCap, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const AboutMeBackend = () => {
   return (
@@ -16,8 +17,10 @@ const AboutMeBackend = () => {
           {/* LEFT SIDE: Professional Image Frame */}
           <div className="relative group w-full max-w-[320px]  lg:max-w-none lg:w-1/3">
             <div className="relative z-10 overflow-hidden rounded-2xl aspect-4/5 border border-white/10 hover:grayscale-0 transition-all duration-500 shadow-2xl">
-              <img
-                src="/masud rana profile picture.webp"
+              <Image
+                width={100}
+                height={100}
+                src="/masud-rana-profile-picture.webp"
                 alt="Masud Rana"
                 className="object-cover w-full h-full scale-110 group-hover:scale-100 transition-transform duration-700"
               />
@@ -104,8 +107,8 @@ const AboutMeBackend = () => {
                 </p>
               </div>
               <div className="space-y-2">
-                <p className="text-2xl font-bold text-accent">2+</p>
-                <p className="text-sm text-foreground/60">Research Papers</p>
+                <p className="text-2xl font-bold text-accent">1+</p>
+                <p className="text-sm text-foreground/60">Publications</p>
               </div>
             </div>
           </div>

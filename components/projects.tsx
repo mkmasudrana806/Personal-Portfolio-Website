@@ -9,6 +9,7 @@ import {
   Brain,
   Compass,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -109,7 +110,9 @@ const Projects = () => {
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden bg-muted">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
