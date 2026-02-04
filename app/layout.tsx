@@ -9,10 +9,23 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Masud Rana | Backend Developer",
+  title: "Masud Rana | Backend Engineer • Node.js",
   description:
-    "Portfolio of Masud Rana, a Computer Science student specializing in Node.js backend development, AI-powered application, and problem solving. Exploring the intersection of software engineering and research.",
+    "Building scalable, production-ready APIs with Node.js, TypeScript & BullMQ. Focused on system design, security, and reliable backend architecture.",
   generator: "Next.js & Tailwind CSS",
+  openGraph: {
+    title: "Masud Rana | Backend Engineer • Node.js",
+    description:
+      "Building scalable, production-ready APIs with Node.js, TypeScript & BullMQ. Focused on system design, security, and reliable backend architecture.",
+    siteName: "Masud Rana Portfolio",
+    images: {
+      url: "/masud rana profile picture.webp",
+    },
+    url: "https://masudranasheikh.me",
+    locale: "en_US",
+    type: "website",
+  },
+
   keywords: [
     "Backend Developer",
     "CSE Student Bangladesh",
