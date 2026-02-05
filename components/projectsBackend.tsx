@@ -77,6 +77,51 @@ const projects: Project[] = [
     live: "#projects",
     type: "Backend",
   },
+  {
+    id: 2,
+    title: "Fitness Equipment & Accessories",
+    description:
+      "An ecommerce backend system designed to support core business workflows such as user management, product cataloging, order processing, and secure transactions. Architected with a modular service structure, the system emphasizes data integrity, access control, and predictable API behavior under real-world usage.",
+    image: "/ai-job-based-job-recruiting-diagram.webp",
+    responsibilities: [
+      <>
+        Architected{" "}
+        <span className="text-accent font-medium">Secure Auth & RBAC</span>{" "}
+        using JWT and bcrypt for protected user/admin operations
+      </>,
+      <>
+        Designed <span className="text-accent font-medium">RESTful APIs</span>{" "}
+        with Zod validation and centralized error handling for data integrity
+      </>,
+      <>
+        Ensured{" "}
+        <span className="text-accent font-medium">Transaction Reliability</span>{" "}
+        using <span className="text-accent">rollback strategies</span> for
+        critical payment processing flows
+      </>,
+      <>
+        Integrated{" "}
+        <span className="text-accent font-medium">Supporting Services</span>{" "}
+        including Nodemailer and Cloudinary for media and notifications
+      </>,
+    ],
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Zod",
+      "bcrypt",
+      "Nodemailer",
+      "Cloudinary",
+    ],
+    github:
+      "https://github.com/mkmasudrana806/Fitness-Equipment-and-Accessories-backend",
+    live: "#projects",
+    type: "Backend",
+  },
 ];
 
 const ProjectsBackend = () => {
@@ -187,6 +232,18 @@ const ProjectsBackend = () => {
               </article>
             ))}
         </div>
+
+        <p className="text-chart-2  italic">
+          Fore more projects, please visit my{" "}
+          <a
+            href="https://github.com/mkmasudrana806"
+            target="_blank"
+            className="text-accent underline"
+          >
+            GitHub
+          </a>{" "}
+          account
+        </p>
       </div>
     </section>
   );

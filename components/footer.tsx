@@ -6,6 +6,7 @@ import {
   ExternalLink,
   Cpu,
   Facebook,
+  PhoneCall,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -56,8 +57,8 @@ const Footer = () => {
                 Email masud.wg@gmail.com
               </Link>
               <p className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent/80 transition-colors">
-                <Mail className="h-4 w-4" />
-                WhatsAPP +8801792852446
+                <PhoneCall className="h-4 w-4" />
+                WhatsApp +8801792852446
               </p>
             </div>
           </div>

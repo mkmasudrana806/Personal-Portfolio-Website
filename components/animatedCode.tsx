@@ -8,65 +8,65 @@ const codeExamples = [
   {
     title: "Express Server",
     language: "javascript",
-    code: `const express = require('express');
+    code: `import express from 'express';
+import { User } from './models/User.js';
+
 const app = express();
 const PORT = process.env.PORT || 5000;
+
 app.use(express.json());
 
-app.post('/api/users', (req, res) => {
-  const user = req.body;
-  // Save to database
+app.post('/api/users', async (req, res) => {
+  const result = await User.create(req.body);
   res.json({ 
-    success: true, 
-    userId: user.id 
+    success: true, data: result 
   });
 });
 
-app.listen(PORT, () => {
-  console.log('Server running on port: ', PORTs);
-});`,
+app.listen(PORT, () =>
+  console.log('Server running on port:', PORT)
+);`,
   },
   {
     title: "MongoDB Schema",
     language: "javascript",
-    code: `const mongoose = require('mongoose');
-const userSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    unique: true
-  },
-  posts: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Post'
-  }],
-});
+    code: `import { Schema, model } from 'mongoose';
 
-const User = mongoose.model( 'User', userSchema );
-`,
+const postSchema = new Schema(
+  {
+    userId: { 
+      type: Schema.Types.ObjectId, ref: 'User', 
+      index: true 
+    },
+    title: { type: String, index: true },
+    content: String,
+    status: { type: String, index: true }
+  },
+  { timestamps: true }
+);
+
+postSchema.index({ status: 1, createdAt: -1 });
+export const Post = model('Post', postSchema);`,
   },
   {
     title: "Query Example",
     language: "javascript",
-    code: `// Find user with posts
-const user = await User.findById(userId)
-  .populate('posts');
+    code: `// Get recent published posts with author info
+const posts = await Post.find(
+  { status: 'published' },  
+  { title: 1, createdAt: 1, userId: 1 } 
+)
+  .sort({ createdAt: -1 }) 
+  .limit(20) 
+  .populate({
+    path: 'userId',
+    select: 'name email'  
+  });
 
-// Create new post
-const post = await Post.create({
-  title: 'Hello World',
-  content: 'My first post',
-  userId: userId
-});
-
-// Update user posts
-await User.findByIdAndUpdate(
-  userId,
-  { $push: { posts: post._id } }
-);`,
+// Count total published posts for analytics
+const total = await Post.countDocuments({
+  status: 'published'
+});`,
   },
 ];
 
