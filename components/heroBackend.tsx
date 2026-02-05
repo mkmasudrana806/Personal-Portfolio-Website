@@ -66,15 +66,21 @@ const HeroBackend = () => {
             <div className="flex flex-col sm:flex-row gap-4  ">
               {/* View My Work */}
               <button className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg bg-blue-600 text-white font-medium transition-all hover:bg-blue-600 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] active:scale-95 group cursor-pointer">
-                View Backend Work
+                <Link href={"#projects"}>View Backend Work</Link>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
 
               {/* Download Resume  */}
-              <button className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg border border-white/20 bg-white/5 text-foreground font-medium backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/40 active:scale-95 cursor-pointer">
+              <a
+                href="/Masud_Rana_Backend_Engineer_Resume.pdf"
+                download="Masud_Rana_Backend_Engineer_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg border border-white/20 bg-white/5 text-foreground font-medium backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/40 active:scale-95 cursor-pointer no-underline"
+              >
                 <FileDown className="mr-2 h-4 w-4 text-blue-400" />
                 Download resume
-              </button>
+              </a>
             </div>
 
             {/* Social Links */}

@@ -115,7 +115,7 @@ const FloatingProfileBackend = () => {
                 <div className="flex items-center gap-3 group">
                   <Phone className="w-5 h-5 text-accent shrink-0" />
                   <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                    +8801792852446
+                    +8801792852446 (WhatsApp)
                   </span>
                 </div>
 
