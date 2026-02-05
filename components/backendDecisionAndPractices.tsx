@@ -25,16 +25,16 @@ const asyncAndSyncProcessing = [
 // schema design and validation =
 const designAndValidation = [
   <>
-    <span className="text-chart-2/60">✔</span> Protects data integrity at the
-    database layer
+    <span className="text-chart-2/60">✔</span> Protects{" "}
+    <span className="text-accent">data integrity</span> at the database layer
   </>,
   <>
-    <span className="text-chart-2/60">✔</span> Simplifies downstream business
-    logic
+    <span className="text-chart-2/60">✔</span>{" "}
+    <span className="text-accent">Simplifies downstream</span> business logic
   </>,
   <>
-    <span className="text-chart-2/60">✔</span> Produces predictable and
-    debuggable failures
+    <span className="text-chart-2/60">✔</span> Produces{" "}
+    <span className="text-accent">predictable and debuggable</span> failures
   </>,
   <>
     {" "}
@@ -167,7 +167,7 @@ const EngineeringDecisionBackend = () => {
             </ul>
           </div>
 
-          <figure className="order-1 md:order-2 rounded-2xl border border-border/50 bg-card/40">
+          <figure className="order-1 md:order-2">
             <Image
               src="/asynchronous-and-synchronous-diagram.webp"
               alt="Asynchronous and Synchronous diagram"
@@ -176,7 +176,7 @@ const EngineeringDecisionBackend = () => {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <figcaption className="text-center mt-2 text-foreground/70">
-              Fig. 2: Asynchronous and Synchronous APIs flow example.
+              Figure: Asynchronous and Synchronous APIs flow example.
             </figcaption>
           </figure>
         </div>
@@ -203,7 +203,7 @@ const EngineeringDecisionBackend = () => {
           </div>
 
           {/* Diagram */}
-          <figure className="order-1 md:order-2 rounded-2xl border border-border/50 bg-card/40">
+          <figure className="order-1 md:order-2">
             <Image
               src="/input-validation-diagram.webp"
               width={713}
@@ -212,7 +212,7 @@ const EngineeringDecisionBackend = () => {
               alt="Example of input data validation in server"
             />
             <figcaption className="text-center mt-2 text-foreground/70">
-              Fig. 3: Example of input data validation in server and shows
+              Figure: Example of input data validation in server and shows
               request response and error flows.
             </figcaption>
           </figure>

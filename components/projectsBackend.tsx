@@ -7,6 +7,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  caption: string;
   responsibilities: React.ReactElement[];
   technologies: string[];
   github?: string;
@@ -21,6 +22,8 @@ const projects: Project[] = [
     description:
       "AI-Powered  job recruting, job ranking, and job searching platforlm. Architected a high-concurrency backend system using Node.js and TypeScript to automate recruitment workflows through AI-driven intelligence. The platform features a distributed processing engine that performs deep-dive Skills Gap Analysis between candidate resumes and job descriptions to generate structured, context-aware interview guides.",
     image: "/ai-job-based-job-recruiting-diagram.webp",
+    caption:
+      "A high level workflow diagram of embedding when a new job is posted in our AI-powered recruiting platform.",
     responsibilities: [
       <>
         Designed <span className="text-accent font-medium">RESTful APIs</span>{" "}
@@ -79,46 +82,62 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Fitness Equipment & Accessories",
+    title: "Travel Tips & Destination Guides",
     description:
-      "An ecommerce backend system designed to support core business workflows such as user management, product cataloging, order processing, and secure transactions. Architected with a modular service structure, the system emphasizes data integrity, access control, and predictable API behavior under real-world usage.",
-    image: "/ai-job-based-job-recruiting-diagram.webp",
+      "A modular backend system for a travel platform supporting user-generated content, premium features, and secure payment workflows. Designed with clear service boundaries, role-based access control, and transactional updates to ensure consistent user state after payment verification.",
+    image: "/AmarPay-payment-system-diagram.webp",
+    caption:
+      "Premium subscription payment lifecycle using external gateway with transactional user upgrade and payment verification",
     responsibilities: [
       <>
-        Architected{" "}
-        <span className="text-accent font-medium">Secure Auth & RBAC</span>{" "}
-        using JWT and bcrypt for protected user/admin operations
+        Implemented{" "}
+        <span className="text-accent font-medium">
+          JWT-based authentication & RBAC
+        </span>{" "}
+        for protected user
       </>,
       <>
-        Designed <span className="text-accent font-medium">RESTful APIs</span>{" "}
-        with Zod validation and centralized error handling for data integrity
-      </>,
-      <>
-        Ensured{" "}
-        <span className="text-accent font-medium">Transaction Reliability</span>{" "}
-        using <span className="text-accent">rollback strategies</span> for
-        critical payment processing flows
+        Designed structured{" "}
+        <span className="text-accent font-medium">RESTful APIs</span> for travel
+        content and user interactions
       </>,
       <>
         Integrated{" "}
-        <span className="text-accent font-medium">Supporting Services</span>{" "}
-        including Nodemailer and Cloudinary for media and notifications
+        <span className="text-accent font-medium">
+          payment gateway verification
+        </span>{" "}
+        before upgrading user premium access
+      </>,
+      <>
+        {" "}
+        Ensured{" "}
+        <span className="text-accent font-medium">
+          Transaction Reliability
+        </span>{" "}
+        using <span className="text-accent">rollback strategies</span> for
+        critical payment processing flows{" "}
+      </>,
+      <>
+        Integrated Supporting Services including{" "}
+        <span className="text-accent font-medium">
+          Nodemailer and Cloudinary
+        </span>{" "}
+        for media and notifications
       </>,
     ],
     technologies: [
-      "Node.js",
-      "TypeScript",
       "Express.js",
-      "MongoDB",
+      "TypeScript",
       "Mongoose",
       "JWT",
       "Zod",
-      "bcrypt",
       "Nodemailer",
       "Cloudinary",
+      "Payment Gateway",
+      "MongoDB Transactions",
     ],
     github:
-      "https://github.com/mkmasudrana806/Fitness-Equipment-and-Accessories-backend",
+      "https://github.com/mkmasudrana806/Travel-Tips-And-Destination-Guides-Backend",
     live: "#projects",
     type: "Backend",
   },
@@ -222,9 +241,7 @@ const ProjectsBackend = () => {
                         alt="AI powered job recruiting system with background job."
                       />
                       <figcaption className="mt-2  text-center">
-                        Fig. 1: A high level workflow diagram of embedding when
-                        a new job is posted in our AI-powered recruiting
-                        platform.
+                        Figure: {project.caption}
                       </figcaption>
                     </figure>
                   </div>
