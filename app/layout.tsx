@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       {
         width: 650,
         height: 450,
-        url: "/masud-rana-profile-picture.webp",
+        url: "/masud-rana-profile-picture-webview.webp",
         alt: "Masud Rana | Backend Engineer",
       },
     ],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Masud Rana | Backend Engineer • Node.js",
     description:
       "Building scalable backend systems with Node.js and TypeScript.",
-    images: ["/masud-rana-profile-picture.webp"],
+    images: ["/masud-rana-profile-picture-webview.webp"],
   },
 
   keywords: [
